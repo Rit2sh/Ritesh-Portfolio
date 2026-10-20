@@ -63,7 +63,7 @@ export default function ContactPage() {
                 className="flex items-center gap-2 text-slate-300 hover:text-sky-400 transition-colors p-2 rounded-lg bg-slate-950 border border-slate-800/80"
               >
                 <LinkedinIcon className="h-4 w-4 text-slate-500" />
-                <span>linkedin.com/in/ritesh-chauhan</span>
+                <span>linkedin.com/in/ritesh-chauhan-80801b293</span>
               </a>
 
               {profile.twitter && (

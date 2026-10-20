@@ -362,7 +362,7 @@ export const projects: Project[] = [
       "Docker",
       "Bash"
     ],
-    repositoryUrl: "https://github.com/Rit2sh/Smart-DDoS-Shield",
+    repositoryUrl: "https://github.com/Rit2sh/Smart-Ddos",
     problemStatement:
       "Small-scale web applications are vulnerable to Layer-4 SYN floods and Layer-7 HTTP volumetric attacks that exhaust server threads and databases. Existing commercial scrubbing centers can be cost-prohibitive for hobbyist servers. A lightweight, locally inspectable defensive shield is needed to detect anomalous traffic spikes and throttle hostile clients before services crash.",
     targetUsers: [
@@ -852,6 +852,7 @@ export const projects: Project[] = [
       "Newsletter Publishing"
     ],
     demoUrl: "https://thebtechguy.com/",
+    repositoryUrl: "https://github.com/Rit2sh/thebtechguy",
     initiativeUrl: "https://thebtechguy.com/",
     socialUrl: "https://www.instagram.com/the.btech.guy/",
     problemStatement:

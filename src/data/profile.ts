@@ -31,7 +31,7 @@ export const profile: Profile = {
   location: "India",
   email: "chauhan.ritesh.work@gmail.com",
   github: "https://github.com/Rit2sh",
-  linkedin: "https://linkedin.com/in/ritesh-chauhan",
+  linkedin: "https://www.linkedin.com/in/ritesh-chauhan-80801b293",
   twitter: "https://x.com/ritesh_builds",
   summary:
     "I’m a software engineer and product builder interested in creating practical technology products that solve real problems. My work spans full-stack development, backend engineering, AI-powered applications, fintech, cybersecurity, and SaaS. I enjoy taking ideas from problem definition through system design, implementation, testing, and deployment, while focusing on maintainability, security, performance, and user experience.",

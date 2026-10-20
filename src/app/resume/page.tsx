@@ -85,7 +85,7 @@ export default function ResumePage() {
                 className="flex items-center gap-1.5 hover:text-sky-400 transition-colors"
               >
                 <LinkedinIcon className="h-3.5 w-3.5 text-slate-400" />
-                <span>linkedin.com/in/ritesh-chauhan</span>
+                <span>linkedin.com/in/ritesh-chauhan-80801b293</span>
               </a>
             </div>
           </div>
