@@ -41,32 +41,58 @@ export async function POST(request: Request) {
         );
       }
     } else if (resendApiKey) {
-      // If Resend API key is present
-      const resendRes = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${resendApiKey}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          from: "Portfolio Contact <onboarding@resend.dev>",
-          to: ["chauhan.ritesh.work@gmail.com"],
-          reply_to: body.email,
-          subject: `Portfolio Inquiry: ${body.opportunityType} from ${body.name}`,
-          text: `Name: ${body.name}\nEmail: ${body.email}\nCompany: ${body.company || "N/A"}\nOpportunity: ${body.opportunityType}\n\nMessage:\n${body.message}`
-        })
-      });
+      const sendViaResend = async (targetEmail: string) => {
+        return fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${resendApiKey}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            from: "Portfolio Contact <onboarding@resend.dev>",
+            to: [targetEmail],
+            reply_to: body.email,
+            subject: `Portfolio Inquiry: ${body.opportunityType} from ${body.name}`,
+            text: `Name: ${body.name}\nEmail: ${body.email}\nCompany: ${body.company || "N/A"}\nOpportunity: ${body.opportunityType}\n\nMessage:\n${body.message}`
+          })
+        });
+      };
+
+      const primaryTarget = process.env.CONTACT_RECEIVER_EMAIL || "chauhan.ritesh.work@gmail.com";
+      let resendRes = await sendViaResend(primaryTarget);
 
       if (!resendRes.ok) {
         const errDetail = await resendRes.text().catch(() => "");
-        console.error("Resend API delivery error:", errDetail);
-        return NextResponse.json(
-          {
-            success: false,
-            error: "Delivery service reported an issue. Please email chauhan.ritesh.work@gmail.com directly."
-          },
-          { status: 502 }
-        );
+        console.error("Resend API delivery error on primary recipient:", errDetail);
+
+        // Resend sandbox testing mode returns:
+        // "You can only send testing emails to your own email address (xyz@gmail.com)..."
+        const allowedEmailMatch = errDetail.match(/\(([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)\)/);
+        if (allowedEmailMatch && allowedEmailMatch[1] && allowedEmailMatch[1] !== primaryTarget) {
+          console.log(`Resend sandbox restriction detected. Auto-forwarding to verified account email: ${allowedEmailMatch[1]}`);
+          resendRes = await sendViaResend(allowedEmailMatch[1]);
+        } else if (primaryTarget !== "rajputanaritesh@gmail.com") {
+          console.log("Retrying to secondary owner email: rajputanaritesh@gmail.com");
+          resendRes = await sendViaResend("rajputanaritesh@gmail.com");
+        }
+
+        // If external API still fails, log complete inquiry payload so no inquiry is ever lost
+        if (!resendRes.ok) {
+          console.error("Inquiry recorded in runtime log due to email delivery provider limitation:", {
+            name: body.name,
+            email: body.email,
+            company: body.company,
+            topic: body.opportunityType,
+            message: body.message,
+            timestamp: new Date().toISOString()
+          });
+
+          return NextResponse.json({
+            success: true,
+            fallbackLogged: true,
+            message: "Inquiry received and logged. If urgent, feel free to reach out directly at chauhan.ritesh.work@gmail.com."
+          });
+        }
       }
     }
 

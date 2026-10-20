@@ -105,10 +105,15 @@ export function ContactForm() {
             <p className="font-semibold">Notice</p>
             <p className="mt-0.5">{errorMessage}</p>
             <a
-              href={`mailto:${profile.email}?subject=Opportunity Inquiry from Portfolio`}
-              className="inline-flex items-center gap-1 mt-2 text-sky-400 hover:underline font-mono"
+              href={`mailto:${profile.email}?subject=${encodeURIComponent(
+                `Portfolio Inquiry: ${formData.opportunityType} from ${formData.name || "Recruiter"}`
+              )}&body=${encodeURIComponent(
+                `Hi Ritesh,\n\n${formData.message}\n\nFrom: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "N/A"}`
+              )}`}
+              className="inline-flex items-center gap-1.5 mt-2.5 px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-sans font-medium text-xs transition-colors shadow"
             >
-              <span>Send directly via email client</span>
+              <Mail className="h-3.5 w-3.5" />
+              <span>Launch pre-filled email in your email client</span>
               <ArrowUpRight className="h-3 w-3" />
             </a>
           </div>
