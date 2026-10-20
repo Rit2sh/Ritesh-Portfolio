@@ -58,7 +58,7 @@ export const projects: Project[] = [
     category: "Full-Stack & SaaS",
     status: "Live",
     featured: true,
-    role: "Lead Full-Stack Engineer & Product Architect",
+    role: "Founder & Lead Software Engineer",
     summary:
       "A high-availability merchant operations platform and real-time customer payment display built for restaurants and retail counters. Bridges POS orders with dynamic customer screens, live QR payment journeys, and instant cash/digital reconciliation.",
     technologies: [

@@ -14,7 +14,7 @@ export interface ExperienceItem {
 export const experiences: ExperienceItem[] = [
   {
     id: "payglow-lead",
-    role: "Lead Product Architect & Full-Stack Builder",
+    role: "Founder & Lead Software Engineer",
     organization: "PayGlow (Original Product)",
     location: "India (Remote)",
     period: "2024 — Present",
