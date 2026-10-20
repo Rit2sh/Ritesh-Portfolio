@@ -851,6 +851,7 @@ export const projects: Project[] = [
       "Social Media Ecosystem",
       "Newsletter Publishing"
     ],
+    demoUrl: "https://thebtechguy.com/",
     initiativeUrl: "https://thebtechguy.com/",
     socialUrl: "https://www.instagram.com/the.btech.guy/",
     problemStatement:
