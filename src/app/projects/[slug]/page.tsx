@@ -18,6 +18,7 @@ import { projects } from "@/data/projects";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { CategoryBadge } from "@/components/ui/CategoryBadge";
 import { ArchitectureDiagram } from "@/components/projects/ArchitectureDiagram";
+import { LivePreviewFrame } from "@/components/projects/LivePreviewFrame";
 import { constructMetadata } from "@/lib/metadata";
 
 interface ProjectPageProps {
@@ -128,6 +129,34 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </div>
         </div>
       </div>
+
+      {/* Live Interactive Product Instance */}
+      {project.demoUrl && (
+        <section className="space-y-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 className="text-base font-bold text-slate-100 flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Live Interactive {project.name} Instance</span>
+              </h2>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Interact with the live running product directly below or launch fullscreen in a new tab.
+              </p>
+            </div>
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-colors shadow-lg shadow-emerald-950/40"
+            >
+              <span>Launch Fullscreen ({project.name})</span>
+              <ExternalLink className="h-3.5 w-3.5" />
+            </a>
+          </div>
+
+          <LivePreviewFrame url={project.demoUrl} title={project.name} />
+        </section>
+      )}
 
       {/* Tech Stack Breakdown */}
       <section className="space-y-3">

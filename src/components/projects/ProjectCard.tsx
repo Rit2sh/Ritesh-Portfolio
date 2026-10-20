@@ -73,11 +73,13 @@ export function ProjectCard({ project, featuredMode = false }: ProjectCardProps)
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-              title="Open Live Deployment"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 font-medium text-[11px] transition-colors"
+              title={`Launch ${project.name} live`}
               aria-label={`Open Live Deployment for ${project.name}`}
             >
-              <ExternalLink className="h-3.5 w-3.5" />
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Live Site</span>
+              <ExternalLink className="h-3 w-3" />
             </a>
           )}
           {project.repositoryUrl && (
