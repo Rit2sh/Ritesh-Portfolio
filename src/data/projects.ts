@@ -72,7 +72,7 @@ export const projects: Project[] = [
       "WebSockets / Polling",
       "Zod Validation"
     ],
-    demoUrl: "https://pay-glow-teal.vercel.app/",
+    demoUrl: "https://payglow.in",
     repositoryUrl: "https://github.com/Rit2sh/PayGlow",
     problemStatement:
       "Small and mid-sized restaurants face a disjointed checkout experience: cashiers quote amounts verbally, customer tablet screens are expensive and locked to proprietary hardware, and split payments or digital QR transactions often cause counter confusion and manual reconciliation errors. Merchants needed an installable, lightweight web application that runs on any tablet or second monitor without dedicated POS vendor lock-in.",

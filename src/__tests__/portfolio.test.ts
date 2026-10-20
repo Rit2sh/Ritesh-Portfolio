@@ -39,7 +39,7 @@ describe("Project Catalog Strict Rules", () => {
     expect(payglow?.category).toBe("Full-Stack & SaaS");
     expect(stockly?.category).toBe("Fintech");
     expect(payglow?.name).not.toBe(stockly?.name);
-    expect(payglow?.demoUrl).toBe("https://pay-glow-teal.vercel.app/");
+    expect(payglow?.demoUrl).toBe("https://payglow.in");
   });
 
   it("should only use approved statuses", () => {

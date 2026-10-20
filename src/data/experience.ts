@@ -28,7 +28,7 @@ export const experiences: ExperienceItem[] = [
       "Deployed and maintained live production web app on Vercel with automated CI/CD and structured logging."
     ],
     technologies: ["Next.js", "TypeScript", "React", "PostgreSQL", "Prisma", "Tailwind CSS", "Zod"],
-    link: "https://pay-glow-teal.vercel.app/"
+    link: "https://payglow.in"
   },
   {
     id: "thebtechguy-founder",
