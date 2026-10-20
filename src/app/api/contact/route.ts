@@ -51,12 +51,15 @@ export async function POST(request: Request) {
         body: JSON.stringify({
           from: "Portfolio Contact <onboarding@resend.dev>",
           to: ["chauhan.ritesh.work@gmail.com"],
+          reply_to: body.email,
           subject: `Portfolio Inquiry: ${body.opportunityType} from ${body.name}`,
           text: `Name: ${body.name}\nEmail: ${body.email}\nCompany: ${body.company || "N/A"}\nOpportunity: ${body.opportunityType}\n\nMessage:\n${body.message}`
         })
       });
 
       if (!resendRes.ok) {
+        const errDetail = await resendRes.text().catch(() => "");
+        console.error("Resend API delivery error:", errDetail);
         return NextResponse.json(
           {
             success: false,
