@@ -50,7 +50,7 @@ export async function POST(request: Request) {
         },
         body: JSON.stringify({
           from: "Portfolio Contact <onboarding@resend.dev>",
-          to: ["riteshchauhan.work@gmail.com"],
+          to: ["chauhan.ritesh.work@gmail.com"],
           subject: `Portfolio Inquiry: ${body.opportunityType} from ${body.name}`,
           text: `Name: ${body.name}\nEmail: ${body.email}\nCompany: ${body.company || "N/A"}\nOpportunity: ${body.opportunityType}\n\nMessage:\n${body.message}`
         })
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
         return NextResponse.json(
           {
             success: false,
-            error: "Delivery service reported an issue. Please email riteshchauhan.work@gmail.com directly."
+            error: "Delivery service reported an issue. Please email chauhan.ritesh.work@gmail.com directly."
           },
           { status: 502 }
         );

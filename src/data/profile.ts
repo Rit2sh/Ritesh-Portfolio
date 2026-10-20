@@ -29,7 +29,7 @@ export const profile: Profile = {
   headline: "Software Engineer | Full-Stack Developer | AI Product Builder",
   subheadline: "Building reliable full-stack applications, scalable backend systems, and grounded AI product workflows with disciplined engineering.",
   location: "India",
-  email: "riteshchauhan.work@gmail.com",
+  email: "chauhan.ritesh.work@gmail.com",
   github: "https://github.com/Rit2sh",
   linkedin: "https://linkedin.com/in/ritesh-chauhan",
   twitter: "https://x.com/ritesh_builds",

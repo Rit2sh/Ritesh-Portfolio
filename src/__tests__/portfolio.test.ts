@@ -8,7 +8,7 @@ import { validateContactForm } from "@/lib/validation";
 describe("Profile Data Integrity", () => {
   it("should have valid name, headline, and email", () => {
     expect(profile.name).toBe("Ritesh Chauhan");
-    expect(profile.email).toBe("riteshchauhan.work@gmail.com");
+    expect(profile.email).toBe("chauhan.ritesh.work@gmail.com");
     expect(profile.headline).toContain("Software Engineer");
     expect(profile.positioning.length).toBeGreaterThan(4);
   });
