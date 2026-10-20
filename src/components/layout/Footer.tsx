@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Mail, ArrowUpRight, Terminal, ShieldCheck } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/Icons";
 import { profile } from "@/data/profile";
 
 export function Footer() {
@@ -36,6 +36,17 @@ export function Footer() {
               >
                 <LinkedinIcon className="h-4 w-4" />
               </a>
+              {profile.twitter && (
+                <a
+                  href={profile.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 hover:text-white transition-colors"
+                  aria-label="Twitter / X Profile"
+                >
+                  <TwitterIcon className="h-4 w-4" />
+                </a>
+              )}
               <a
                 href={`mailto:${profile.email}`}
                 className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 hover:text-white transition-colors"

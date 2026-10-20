@@ -60,7 +60,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@ritesh_builds"
+      creator: "@riteshchauhan69695"
     },
     robots: {
       index: !noIndex,
