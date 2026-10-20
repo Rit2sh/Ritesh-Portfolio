@@ -17,7 +17,7 @@ export const metadata: Metadata = constructMetadata({
 
 export default function ResumePage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10 py-10 space-y-8">
       {/* Recruiter Toolbar (Hidden when printing) */}
       <div className="no-print p-4 rounded-xl bg-slate-900 border border-slate-800 flex flex-wrap items-center justify-between gap-4 text-xs">
         <div className="flex items-center gap-2">

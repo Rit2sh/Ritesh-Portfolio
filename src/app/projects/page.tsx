@@ -12,7 +12,7 @@ export const metadata: Metadata = constructMetadata({
 
 export default function ProjectsPage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 space-y-10">
       {/* Header */}
       <div className="max-w-2xl space-y-3">
         <p className="text-xs font-mono uppercase tracking-wider text-sky-400">

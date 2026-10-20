@@ -88,8 +88,8 @@ export default function HomePage() {
         {/* Subtle background glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-sky-500/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="max-w-4xl space-y-6">
             {/* Availability Pill */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono">
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -181,7 +181,7 @@ export default function HomePage() {
       </section>
 
       {/* Engineering Snapshot */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="mb-8">
           <p className="text-xs font-mono uppercase tracking-wider text-sky-400">Core Capabilities</p>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-100 mt-1">
@@ -220,7 +220,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
             <p className="text-xs font-mono uppercase tracking-wider text-sky-400">Original Initiatives</p>
@@ -248,7 +248,7 @@ export default function HomePage() {
       </section>
 
       {/* Engineering Approach / Workflow */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="p-8 sm:p-10 rounded-2xl bg-slate-900/40 border border-slate-800">
           <div className="max-w-2xl mb-10">
             <p className="text-xs font-mono uppercase tracking-wider text-sky-400 flex items-center gap-1.5">
@@ -281,7 +281,7 @@ export default function HomePage() {
       </section>
 
       {/* Technical Depth Case Highlight */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-950 border border-slate-800 space-y-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
             <div>
@@ -332,7 +332,7 @@ export default function HomePage() {
       </section>
 
       {/* About Teaser */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8 rounded-2xl bg-slate-900/30 border border-slate-800/80 items-center">
           <div className="lg:col-span-2 space-y-4">
             <p className="text-xs font-mono uppercase tracking-wider text-sky-400">About Ritesh</p>
@@ -367,7 +367,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="p-8 sm:p-12 rounded-2xl bg-gradient-to-r from-sky-950/40 via-slate-900 to-indigo-950/40 border border-sky-500/20 text-center space-y-6">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-100">
             Let&apos;s build something meaningful.
